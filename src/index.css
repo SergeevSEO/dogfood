@@ -13,15 +13,10 @@ body {
   height: 100%;
 }
 
-#root {
+.root {
   min-height: 100%;
   display: flex;
   flex-direction: column;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
 }
 
 h1 {
@@ -44,136 +39,7 @@ button {
 
 }
 
-.header {
-  padding: 20px 0;
-  background-color: rgb(214, 171, 255);
-  box-shadow: 0 0 10px #000;
-}
 
-.head {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.head__logo {
-  font-size: 24px;
-  font-weight: bold;
-  text-align: center;
-  letter-spacing: -1px;
-  color: #000000;
-
-}
-
-.footer {
-  font-size: 20px;
-  font-weight: bold;
-  text-align: center;
-  width: 100%;
-  background-color: #600079;
-  padding: 20px 0;
-  color: #eeeeee;
-}
-
-.main {
-  margin-top: 20px;
-  font-size: 20px;
-  flex: 1 1 auto;
-  display: flex;
-  justify-content: center;
-}
-
-.error {
-  font-size: 26px;
-  text-align: center;
-
-}
-
-.card-list {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.card {
-  width: 205px;
-  height: 400px;
-  padding: 10px;
-  margin-bottom: 30px;
-
-  border-radius: 10px;
-  background-color: rgb(255, 255, 255);
-  box-shadow: 0 0 3px #ac00e0;
-}
-
-.card__top {
-  height: 280px;
-  border-bottom: 1px solid #000000;
-}
-
-.card__img {
-  height: 180px;
-  border-radius: 10px;
-  display: flex;
-  margin: 5px auto;
-  max-width: 90%;
-  object-fit: contain;
-}
-
-.card__name {
-  font-size: 18px;
-  text-align: center;
-  font-weight: bold;
-}
-
-.card__bottom {
-  height: 100px;
-  display: flex;
-  flex-direction: column;
-}
-
-.card__info {
-  display: flex;
-  justify-content: space-between;
-  padding: 7px;
-}
-
-.card__price {
-  font-size: 16px;
-  font-weight: bold;
-}
-
-.card__price_orange {
-  color: #fc5c00;
-}
-
-.card__price-sale {
-  color: #888888;
-  text-decoration: line-through;
-  font-size: 14px;
-}
-
-.btn-order {
-  border: 2px solid #ac00e0;
-  padding: 3px 15px 7px;
-  border-radius: 20px;
-  font-weight: bold;
-  margin-top: auto;
-
-}
-
-.btn-order:hover {
-  color: #ffffff;
-  background: #ac00e0;
-  border: 2px solid #750099;
-}
-
-.btn-order:active {
-  color: #ffffff;
-  background: #ac00e0;
-  border: 2px solid #750099;
-  box-shadow: 0 0 5px #ac00e0;
-}
 
 /*992-1300px*/
 @media screen and (max-width: 1300px) { 

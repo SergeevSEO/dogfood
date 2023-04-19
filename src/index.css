@@ -1,3 +1,7 @@
+html {
+  height: 100%;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,6 +9,14 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #eeeeee;
+  height: 100%;
+}
+
+#root {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 code {
@@ -12,29 +24,193 @@ code {
     monospace;
 }
 
+h1 {
+  text-align: center;
+
+}
+
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+
+}
+
 .header {
-  margin-bottom: 40px;
-  font-size: 20px;
+  padding: 20px 0;
+  background-color: rgb(214, 171, 255);
+  box-shadow: 0 0 10px #000;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.head__logo {
+  font-size: 24px;
   font-weight: bold;
   text-align: center;
+  letter-spacing: -1px;
+  color: #000000;
+
 }
 
 .footer {
-  margin-bottom: 20px;
   font-size: 20px;
   font-weight: bold;
   text-align: center;
-  position: absolute;
-  bottom: 0;
-  left: 0;
   width: 100%;
+  background-color: #600079;
+  padding: 20px 0;
+  color: #eeeeee;
 }
 
 .main {
   margin-top: 20px;
   font-size: 20px;
-  font-weight: bold;
+  flex: 1 1 auto;
   display: flex;
-  align-items: center;
   justify-content: center;
+}
+
+.error {
+  font-size: 26px;
+  text-align: center;
+
+}
+
+.card-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 205px;
+  height: 400px;
+  padding: 10px;
+  margin-bottom: 30px;
+
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 0 3px #ac00e0;
+}
+
+.card__top {
+  height: 280px;
+  border-bottom: 1px solid #000000;
+}
+
+.card__img {
+  height: 180px;
+  border-radius: 10px;
+  display: flex;
+  margin: 5px auto;
+  max-width: 90%;
+  object-fit: contain;
+}
+
+.card__name {
+  font-size: 18px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.card__bottom {
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card__info {
+  display: flex;
+  justify-content: space-between;
+  padding: 7px;
+}
+
+.card__price {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.card__price_orange {
+  color: #fc5c00;
+}
+
+.card__price-sale {
+  color: #888888;
+  text-decoration: line-through;
+  font-size: 14px;
+}
+
+.btn-order {
+  border: 2px solid #ac00e0;
+  padding: 3px 15px 7px;
+  border-radius: 20px;
+  font-weight: bold;
+  margin-top: auto;
+
+}
+
+.btn-order:hover {
+  color: #ffffff;
+  background: #ac00e0;
+  border: 2px solid #750099;
+}
+
+.btn-order:active {
+  color: #ffffff;
+  background: #ac00e0;
+  border: 2px solid #750099;
+  box-shadow: 0 0 5px #ac00e0;
+}
+
+/*992-1300px*/
+@media screen and (max-width: 1300px) { 
+  .container {
+    width: 980px;
+  }
+}
+
+/*768-1050px*/
+@media screen and (max-width: 1050px) { 
+  .container {
+    width: 720px;
+  }
+}
+
+/*576-768px*/
+@media screen and (max-width: 768px) {
+  .container {
+    width: 480px;
+  }
+}
+
+/*320-576px*/
+@media screen and (max-width: 576px) {
+  .container {
+    width: 280px;
+  }
+
+  .head {
+    justify-content: center;
+  }
+
+  .head__text {
+    display: none;
+  }
+
+  .card-list {
+    margin: 0 auto;
+  }
 }

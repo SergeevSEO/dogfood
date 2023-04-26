@@ -1,0 +1,10 @@
+.card-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+.error {
+    font-size: 26px;
+    text-align: center;
+  }

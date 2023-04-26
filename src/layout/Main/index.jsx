@@ -1,4 +1,6 @@
+import './main.css'
 import { CardList } from "../../components/CardList"
+
 
 export const Main = () => {
     return (

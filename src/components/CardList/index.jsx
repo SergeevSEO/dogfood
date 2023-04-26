@@ -1,3 +1,4 @@
+import './cardList.css'
 import { useEffect, useState } from "react"
 import { CardItem } from "../CardItem";
 
@@ -5,6 +6,7 @@ const TOKEN = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDEwN2UwOWFhMzk3
 
 export const CardList = () => {
     const [products, setProducts] = useState([]);
+    const [error, setError] = useState([]);
 
     useEffect(() => {
         const dataProduct = async () => {
@@ -14,7 +16,7 @@ export const CardList = () => {
                 }
             })
             if(!res.ok){
-                return setProducts({message:"Что-то пошло не так!"})
+                return setError({message:"Что-то пошло не так!"})
             }
             const data = await res.json();
             const products = data.products;
@@ -24,9 +26,9 @@ export const CardList = () => {
         dataProduct();
     }, [])
     
-    if (products.message) {
+    if (error.message) {
         return(
-            <div className="error">{products.message}</div>
+            <div className="error">{error.message}</div>
         )
     }
     return (

@@ -3,15 +3,20 @@
     height: 400px;
     padding: 10px;
     margin-bottom: 30px;
-  
     border-radius: 10px;
     background-color: rgb(255, 255, 255);
     box-shadow: 0 0 3px #ac00e0;
+
+  }
+
+  .card:hover {
+    box-shadow: 0 0 7px #ac00e0;
   }
   
   .card__top {
     height: 280px;
     border-bottom: 1px solid #000000;
+    cursor: pointer;
   }
   
   .card__img {
@@ -27,6 +32,10 @@
     font-size: 18px;
     text-align: center;
     font-weight: bold;
+  }
+
+  .card__name:hover {
+    color: #750099;
   }
   
   .card__bottom {

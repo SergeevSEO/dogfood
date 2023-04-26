@@ -1,0 +1,66 @@
+.currentCard {
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+.currentCard__wrapper {
+    background-color: #fff;
+    border-radius: 15px;
+    display: flex;
+    box-shadow: 0 0 3px #686868;   
+    margin: 20px 0;
+}
+
+.currentCard__info {
+    margin: 20px;
+}
+
+.currentCard__img {
+    max-width: 500px;
+    max-height: 500px;
+    margin-right: 40px;
+    margin: 20px;
+}
+
+.currentCard__h1 {
+    font-size: 26px;
+}
+
+.currentCard__price-wrapper {
+    display: flex;
+    align-items: flex-end;
+}
+
+.currentCard__price {
+    font-size: 26px;
+}
+
+.currentCard__price-sale {
+    color: #888888;
+    text-decoration: line-through;
+    font-size: 16px;
+    margin-right: 15px;
+}
+
+.currentCard__h2 {
+    margin-top: 50px;
+    font-weight: bold;
+}
+
+.currentCard__description {
+    font-size: 16px;
+}
+
+.currentCard__reviews {
+    display: flex;
+    justify-content: center;
+}
+
+.currentCard__link {
+    color: #6d6d6d;
+    text-decoration: none;
+}
+
+.currentCard__link:hover {
+    border-bottom: 1px solid #6d6d6d;
+}

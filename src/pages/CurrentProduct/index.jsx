@@ -1,34 +1,36 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom"
-import {TOKEN} from '../../utils/consts.js'
+import {AUTH_TOKEN} from '../../utils/consts.js'
 import './currentProduct.css'
 
 export const CurrentProduct = () => {
-
     const {idOfProduct} = useParams();
-
     const [currentProduct, setCurrentProduct] = useState([]);
     const [error, setError] = useState([]);
+
+    const token = localStorage.getItem(AUTH_TOKEN)
+
     useEffect(() => {
-        const getCurrentProduct = async(id) => {
+        const getCurrentProduct = async (id, token) => {
             const res = await fetch(`https://api.react-learning.ru/products/${id}`, {
                 headers: {
-                    Authorization: 'Bearer ' + TOKEN
+                    Authorization: `Bearer ${token}`
                 }
             })
             if(!res.ok){
                 return setError({message:"Что-то пошло не так!"})
             }
             const response = await res.json()
-            console.log(response);
             setCurrentProduct(response)
         }
-
-        getCurrentProduct(idOfProduct)
-    }, [idOfProduct])
+        getCurrentProduct(idOfProduct, token)
+    }, [idOfProduct, token])
     if (error.message) {
         return(
+            <>
+            <Link to=".." relative="path" className="currentCard__link">Вернуться в Каталог</Link>
             <div className="error">{error.message}</div>
+            </>
         )
     }
 

@@ -1,18 +1,13 @@
 import './App.css';
-import { Outlet, useNavigate } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 import { Header } from './layout/Header';
 import { Footer } from './layout/Footer';
-import { useEffect } from 'react';
+// import { useEffect } from 'react';
 
 
 
 function App() {
-  const navigate = useNavigate();
 
-  useEffect(() => {
-      const token = localStorage.getItem('token')
-      if (!token) navigate('/signin')
-  }, [navigate])
 
   return (
     <>

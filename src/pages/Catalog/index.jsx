@@ -2,15 +2,17 @@ import './catalog.css'
 import { CardList } from "../../components/CardList"
 import { useNavigate } from 'react-router-dom'
 import { useEffect } from 'react';
+import { AUTH_TOKEN } from '../../utils/consts';
 
 
 export const Catalog = () => {
     const navigate = useNavigate();
 
+    const token = localStorage.getItem(AUTH_TOKEN)
+
     useEffect(() => {
-        const token = localStorage.getItem('token')
         if (!token) navigate('/signin')
-    }, [navigate])
+    }, [navigate, token])
 
     return (
         <>

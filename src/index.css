@@ -20,6 +20,8 @@ body {
 }
 
 h1 {
+  font-size: 36px;
+  line-height: 40px;
   text-align: center;
 
 }
@@ -39,7 +41,25 @@ button {
 
 }
 
+.btn {
+  border: 2px solid #ac00e0;
+  padding: 3px 15px 7px;
+  font-weight: bold;
+  margin-top: auto;
+}
 
+.btn:hover {
+  color: #ffffff;
+  background: #ac00e0;
+  border: 2px solid #750099;
+}
+
+.btn:active {
+  color: #ffffff;
+  background: #ac00e0;
+  border: 2px solid #750099;
+  box-shadow: 0 0 5px #ac00e0;
+}
 
 /*992-1300px*/
 @media screen and (max-width: 1300px) { 

@@ -1,0 +1,26 @@
+.home__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home__img {
+    max-width: 600px;
+    display: block;
+
+}
+.home__text {
+    display: block;
+    text-align: center;
+    max-width: 800px;
+}
+
+.home__btn {
+    margin: 10px 10px 30px;
+    text-align: center;
+}
+
+.home__text-auth {
+    margin: 0;
+    font-weight: bold;
+}

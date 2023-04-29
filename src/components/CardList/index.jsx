@@ -11,7 +11,7 @@ export const CardList = () => {
         const dataProduct = async () => {
             const res = await fetch('https://api.react-learning.ru/products', {
                 headers: {
-                    Authorization: 'Bearer ' + TOKEN
+                    Authorization: `Bearer ${TOKEN}`
                 }
             })
             if(!res.ok){

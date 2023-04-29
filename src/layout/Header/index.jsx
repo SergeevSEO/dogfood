@@ -8,9 +8,9 @@ export const Header = () => {
                     <div className="head__logo">
                         Dog Food
                     </div>
-                    <div className="head__text">
-                        Тут будет что-то ещё
-                    </div>
+                    <button className="head__text">
+                        Выйти
+                    </button>
                 </div>
             </div>
         </header>

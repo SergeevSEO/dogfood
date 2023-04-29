@@ -1,1 +1,1 @@
-export const TOKEN = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDEwN2UwOWFhMzk3MTIxODM4ZjI5MDgiLCJncm91cCI6Imdyb3VwLTExIiwiaWF0IjoxNjc4ODAyNDQ5LCJleHAiOjE3MTAzMzg0NDl9.ueVjcLvvxuzr5_jhp43vMeRe2DSpoJefoUrYrx6zPPQ';
+export const TOKEN = localStorage.getItem('token');

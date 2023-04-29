@@ -5,22 +5,27 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import './index.css';
-import { Layout } from './layout';
-import { CurrentProduct } from './components/CurrentProduct';
 import App from './App';
+import { Catalog } from './pages/Catalog';
+import { CurrentProduct } from './pages/CurrentProduct';
+import { SignIn } from './pages/SignIn';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Layout />,
+    element: <App />,
     children: [
       {
+        path: "signin",
+        element: <SignIn />
+      },
+      {
         path: "catalog",
-        element: <App />,
+        element: <Catalog />
       },
       {
         path: "catalog/:idOfProduct",
-        element: <CurrentProduct />,
+        element: <CurrentProduct />
       }
     ]
   }

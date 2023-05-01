@@ -17,3 +17,12 @@ export const signUpFetch = (values) => {
         body: JSON.stringify(values)
     })
 }
+
+export const aboutMeFetch = (token) => {
+    return fetch('https://api.react-learning.ru/v2/group-11/users/me', {
+        method: 'GET',
+        headers: {
+            Authorization: `Bearer ${token}`
+        },
+    })
+}

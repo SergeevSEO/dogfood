@@ -30,7 +30,7 @@ export const CardItem = ( {product} ) => {
                         {product.wight}
                     </div>
                 </div>
-                <button className="btn btn-order">
+                <button className="btn btn__order">
                     Заказать
                 </button>
             </div>

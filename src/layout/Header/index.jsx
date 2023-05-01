@@ -1,4 +1,4 @@
-import { Link, useNavigate } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import { AUTH_TOKEN } from '../../utils/consts'
 import './header.css'
 
@@ -17,11 +17,19 @@ export const Header = () => {
             <div className="container">
                 <div className="head">
                     <div>
-                       <Link to="/" className="head__logo">Dog Food</Link> 
+                       <NavLink to="/" className="head__logo">Dog Food</NavLink> 
                     </div>
-                    {token ? <><button onClick={() => navigate('about-me')}>Обо мне</button>
-                                <button onClick={exitAccount}>Выйти</button> </>
-                            : <button onClick={() => navigate('signin')}>Авторизация</button>}
+                    {token && <nav className='nav'>
+                        <ul className='nav__list'>
+                            <li className='nav__item'>
+                                <NavLink to="/catalog" end>Каталог</NavLink>
+                            </li>
+                            <li className='nav__item'>
+                                <NavLink to="/about-me">Обо мне</NavLink> 
+                            </li>
+                        </ul>
+                        <button className='nav__btn' onClick={exitAccount}>Выйти</button> 
+                    </nav>}
                 </div>
             </div>
         </header>

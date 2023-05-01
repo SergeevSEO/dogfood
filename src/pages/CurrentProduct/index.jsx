@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom"
+import { Link, useNavigate, useParams } from "react-router-dom"
 import {AUTH_TOKEN} from '../../utils/consts.js'
 import './currentProduct.css'
 
@@ -7,8 +7,13 @@ export const CurrentProduct = () => {
     const {idOfProduct} = useParams();
     const [currentProduct, setCurrentProduct] = useState([]);
     const [error, setError] = useState([]);
+    const navigate = useNavigate();
 
     const token = localStorage.getItem(AUTH_TOKEN)
+
+    useEffect(() => {
+        if (!token) navigate('/signin')
+    }, [navigate, token])
 
     useEffect(() => {
         const getCurrentProduct = async (id, token) => {
@@ -56,8 +61,8 @@ export const CurrentProduct = () => {
                         <div className="currentCard__price">{currentProduct.price} руб.</div>
                         )
                     }
-                    <p>Тут будет выбор количества товара</p>
-                    <button className="btn btn-order">Заказать</button>
+                    <p>Здесь будет количество товара</p>
+                    <button className="btn btn__order">Заказать</button>
                     <p className="currentCard__h2">Описание:</p>
                     <p className="currentCard__description">{currentProduct.description}</p>
                 </div>

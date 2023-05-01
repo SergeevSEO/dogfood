@@ -1,0 +1,14 @@
+.user-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.user-img {
+    max-width: 300px;
+    max-height: 300px;
+    margin-right: 50px;
+}
+
+.user-info span {
+    font-weight: bold;
+}

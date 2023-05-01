@@ -3,12 +3,17 @@ import * as Yup from 'yup';
 import { signInFetch } from "../../api/user";
 import { Link, useNavigate } from "react-router-dom";
 import { AUTH_TOKEN } from "../../utils/consts";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import './signIn.css';
 
 export const SignIn = () => {
     const navigate = useNavigate()
     const [error, setError] = useState(false)
+    const token = localStorage.getItem(AUTH_TOKEN)
+
+    useEffect(() => {
+        if (token) navigate('/')
+    }, [navigate, token])
 
     const initialValues = {
         email: '',

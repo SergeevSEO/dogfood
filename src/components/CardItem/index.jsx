@@ -1,14 +1,16 @@
+import { useNavigate } from 'react-router-dom';
 import './cardItem.css'
 
 export const CardItem = ( {product} ) => { 
-    
+    const navigate = useNavigate();
+
     const getPrice = (product) => {
         return product.price - product.price * (product.discount / 100);
     };
 
     return (
         <div className="card">
-            <div className="card__top">
+            <div className="card__top" onClick={() => navigate(`${product._id}`)}>
                 <img className="card__img" src={product.pictures} alt={product.name} />
                 <p className="card__name">{product.name}</p>
             </div>
@@ -28,7 +30,7 @@ export const CardItem = ( {product} ) => {
                         {product.wight}
                     </div>
                 </div>
-                <button className="btn btn-order">
+                <button className="btn btn__order">
                     Заказать
                 </button>
             </div>

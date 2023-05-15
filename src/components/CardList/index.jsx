@@ -1,18 +1,19 @@
 import './cardList.css'
 import { useEffect, useState } from "react"
 import { CardItem } from "../CardItem";
-
-const TOKEN = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDEwN2UwOWFhMzk3MTIxODM4ZjI5MDgiLCJncm91cCI6Imdyb3VwLTExIiwiaWF0IjoxNjc4ODAyNDQ5LCJleHAiOjE3MTAzMzg0NDl9.ueVjcLvvxuzr5_jhp43vMeRe2DSpoJefoUrYrx6zPPQ';
+import { AUTH_TOKEN } from '../../utils/consts';
 
 export const CardList = () => {
     const [products, setProducts] = useState([]);
     const [error, setError] = useState([]);
 
+    const token = localStorage.getItem(AUTH_TOKEN)
+
     useEffect(() => {
         const dataProduct = async () => {
             const res = await fetch('https://api.react-learning.ru/products', {
                 headers: {
-                    Authorization: 'Bearer ' + TOKEN
+                    Authorization: `Bearer ${token}`
                 }
             })
             if(!res.ok){
@@ -24,7 +25,7 @@ export const CardList = () => {
 
         }
         dataProduct();
-    }, [])
+    }, [token])
     
     if (error.message) {
         return(

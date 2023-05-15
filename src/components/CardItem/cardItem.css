@@ -2,78 +2,69 @@
     width: 205px;
     height: 400px;
     padding: 10px;
-    margin-bottom: 30px;
-  
+    margin-bottom: 10px;
     border-radius: 10px;
     background-color: rgb(255, 255, 255);
     box-shadow: 0 0 3px #ac00e0;
+
   }
-  
-  .card__top {
-    height: 280px;
-    border-bottom: 1px solid #000000;
-  }
-  
-  .card__img {
-    height: 180px;
-    border-radius: 10px;
-    display: flex;
-    margin: 5px auto;
-    max-width: 90%;
-    object-fit: contain;
-  }
-  
-  .card__name {
-    font-size: 18px;
-    text-align: center;
-    font-weight: bold;
-  }
-  
-  .card__bottom {
-    height: 100px;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .card__info {
-    display: flex;
-    justify-content: space-between;
-    padding: 7px;
-  }
-  
-  .card__price {
-    font-size: 16px;
-    font-weight: bold;
-  }
-  
-  .card__price_orange {
-    color: #fc5c00;
-  }
-  
-  .card__price-sale {
-    color: #888888;
-    text-decoration: line-through;
-    font-size: 14px;
-  }
-  
-  .btn-order {
-    border: 2px solid #ac00e0;
-    padding: 3px 15px 7px;
-    border-radius: 20px;
-    font-weight: bold;
-    margin-top: auto;
-  
-  }
-  
-  .btn-order:hover {
-    color: #ffffff;
-    background: #ac00e0;
-    border: 2px solid #750099;
-  }
-  
-  .btn-order:active {
-    color: #ffffff;
-    background: #ac00e0;
-    border: 2px solid #750099;
-    box-shadow: 0 0 5px #ac00e0;
-  }
+
+.card:hover {
+  box-shadow: 0 0 7px #ac00e0;
+}
+
+.card__top {
+  height: 280px;
+  border-bottom: 1px solid #000000;
+  cursor: pointer;
+}
+
+.card__img {
+  height: 180px;
+  border-radius: 10px;
+  display: flex;
+  margin: 5px auto;
+  max-width: 90%;
+  object-fit: contain;
+}
+
+.card__name {
+  font-size: 18px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.card__name:hover {
+  color: #750099;
+}
+
+.card__bottom {
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card__info {
+  display: flex;
+  justify-content: space-between;
+  padding: 7px;
+}
+
+.card__price {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.card__price_orange {
+  color: #fc5c00;
+}
+
+.card__price-sale {
+  color: #888888;
+  text-decoration: line-through;
+  font-size: 14px;
+}
+
+.btn__order {
+border-radius: 20px;
+}

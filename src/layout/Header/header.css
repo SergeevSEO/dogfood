@@ -16,4 +16,34 @@
     text-align: center;
     letter-spacing: -1px;
     color: #000000;
+    text-decoration: none;
+  }
+
+  .nav {
+    display: flex;
+  }
+
+  .nav__list {
+    display: flex;
+    list-style: none;
+    font-size: 20px;
+    margin: 0;
+  }
+
+  .nav__item {
+    margin-right: 40px;
+
+  }
+
+  .nav__item a {
+    text-decoration: none;
+    color: #000;
+  }
+
+  .nav__item a.active {
+    border-bottom: 1px solid #000;
+  }
+
+  .nav__btn {
+    font-size: 20px;  
   }
